@@ -21,13 +21,13 @@ const todoList = (arr) => {
     duties
       .appendChild(document.createElement('li'))
       .setAttribute('id', element.index);
-    const task = document.getElementById(element.index);
+    const task = duties.getElementById(element.index);
     task.classList.add('task', 'draggable');
     // Create checkbox //
     task
       .appendChild(document.createElement('input'))
       .setAttribute('id', `${element.index}-checkbox`);
-    const checkbox = document.getElementById(`${element.index}-checkbox`);
+    const checkbox = duties.getElementById(`${element.index}-checkbox`);
     checkbox.setAttribute('type', 'checkbox');
     checkbox.classList.add('checkbox');
     // Create description //
@@ -47,7 +47,7 @@ const todoList = (arr) => {
     task
       .appendChild(document.createElement('i'))
       .setAttribute('id', `${element.index}-trash`);
-    const trashBtn = document.getElementById(`${element.index}-trash`);
+    const trashBtn = duties.getElementById(`${element.index}-trash`);
     trashBtn.classList.add('far', 'fa-trash-alt', 'trash-btn');
     // Create add event listeners //
     mousedown(dragBtn);
